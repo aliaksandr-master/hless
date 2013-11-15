@@ -1,0 +1,122 @@
+._box_sizing(@type){ /* @type : border-box */
+    -webkit-box-sizing: @type;
+    -moz-box-sizing: @type;
+    -o-box-sizing: @type;
+    box-sizing: @type;
+}
+
+._inline_block(@v-align: top){
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: @v-align;
+}
+
+._center(){
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+}
+
+._center(@w){
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+    width: @w;
+}
+
+/*BLOCK SIZE*/
+._size(@w, @h){
+    width: @w;
+    height: @h;
+}
+
+._size(@w){
+    width: @w;
+    height: @w;
+}
+
+/*for box justify*/
+._block_justify_parent(){
+    /*Firefox 3+,Opera11.51+,IE6+,Safari5.1,Chrome*/
+    & {
+        text-align: justify;
+        text-justify: newspaper;
+        text-align-last: justify;
+		font-size: 0;
+		line-height: 0;
+        zoom: 1;
+    }
+    &:after {
+        width: 100%;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        content: ' ';
+		._inline_block();
+    }
+}
+
+._block_justify_child(){
+    ._inline_block();
+    text-align: left;
+}
+
+._block_justify_child(@font_size, @line_height){
+	._inline_block();
+	text-align: left;
+    line-height: @font_size;
+    font-size: @line_height;
+}
+
+._position_middle(@height){
+    top: 50%;
+    margin-top: (0px - (@height / 2));
+}
+
+._position_middle_child(){
+    ._inline_block(middle);
+    text-align: left;
+}
+
+._position_middle_parent(@height: 100%){
+    &{
+        height: @height;
+        text-align: center;
+        vertical-align: middle;
+    }
+    &:after{
+        content: "";
+        ._inline_block(middle);
+        width: 0;
+        height: 100%;
+    }
+}
+
+._clearfix(){
+    &:before,
+    &:after{
+        content: " ";
+        display: table;
+    }
+    &:after{
+        clear: both;
+    }
+}
+
+._clearfix_hard(){
+    &:before,
+    &:after{
+		content: ".";
+		display: block;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+    }
+    &:after{
+        clear: both;
+    }
+}

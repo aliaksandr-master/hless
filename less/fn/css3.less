@@ -1,0 +1,261 @@
+._border_radius(@r){
+	-webkit-border-radius: @r;
+	-ms-border-radius: @r;
+	-o-border-radius: @r;
+	border-radius: @r;
+}
+
+._border_radius_top_left(@r){
+	border-top-left-radius: @r;
+	-moz-border-radius-topleft: @r;
+	-webkit-border-top-left-radius: @r;
+}
+
+._border_radius_top_rright(@r){
+	border-top-right-radius: @r;
+	-moz-border-radius-topright: @r;
+	-webkit-border-top-right-radius: @r;
+}
+
+._border_radius_bottom_right(@r){
+	border-bottom-right-radius: @r;
+	-moz-border-radius-bottomright: @r;
+	-webkit-border-bottom-right-radius: @r;
+}
+
+._border_radius_bottom_left(@r){
+	border-bottom-left-radius: @r;
+	-moz-border-radius-bottomleft: @r;
+	-webkit-border-bottom-left-radius: @r;
+}
+
+._box_shadow(@a){
+	-webkit-box-shadow: @a;
+	-o-box-shadow: @a;
+	box-shadow: @a;
+}
+
+._box_shadow(@a, @b){
+	-webkit-box-shadow:@a, @b;
+	-o-box-shadow:@a, @b;
+	box-shadow:@a, @b;
+}
+
+._animate(@time: 0.3s, @easing: linear, @elements: all){
+   -webkit-transition: @elements @time @easing;
+   -moz-transition: @elements @time @easing;
+   -o-transition: @elements @time @easing;
+   transition: @elements @time @easing;
+}
+
+._transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+
+._transition_delay(@delay) {
+	-webkit-transition-delay: @delay;
+	-moz-transition-delay: @delay;
+	-o-transition-delay: @delay;
+	transition-delay: @delay;
+}
+
+._transition_duration(@duration) {
+	-webkit-transition-duration: @duration;
+	-moz-transition-duration: @duration;
+	-o-transition-duration: @duration;
+	transition-duration: @duration;
+}
+
+._transform_scale(@ratio) {
+	-webkit-transform: scale(@ratio);
+	-moz-transform: scale(@ratio);
+	-ms-transform: scale(@ratio);
+	-o-transform: scale(@ratio);
+	transform: scale(@ratio);
+}
+
+._transform_translate(@x, @y) {
+	-webkit-transform: translate(@x, @y);
+	-moz-transform: translate(@x, @y);
+	-ms-transform: translate(@x, @y);
+	-o-transform: translate(@x, @y);
+	transform: translate(@x, @y);
+}
+
+._transform_skew(@x, @y) {
+	-webkit-transform: skew(@x, @y);
+	-moz-transform: skew(@x, @y);
+	-ms-transform: skewX(@x) skewY(@y); /* See https://github.com/twitter/bootstrap/issues/4885 */
+	-o-transform: skew(@x, @y);
+	transform: skew(@x, @y);
+	-webkit-backface-visibility: hidden; /* See https://github.com/twitter/bootstrap/issues/5319 */
+}
+
+._transform_translate3d(@x, @y, @z) {
+	-webkit-transform: translate3d(@x, @y, @z);
+	-moz-transform: translate3d(@x, @y, @z);
+	-o-transform: translate3d(@x, @y, @z);
+	transform: translate3d(@x, @y, @z);
+}
+
+._rotate_ie(@deg){
+	._rotate_ie7_ie8(cos(@deg), sin(@deg));
+}
+._rotate_ie7_ie8(@cos, @sin){
+   @_sin: @sin * -1;
+   filter: e('progid:DXImageTransform.Microsoft.Matrix(M11=@{cos}, M12=@{_sin}, M21=@{sin}, M22=@{cos}, SizingMethod="auto expand", enabled=true)');
+}
+._rotate(@deg){
+	-moz-transform: rotate(@deg);
+	-webkit-transform: rotate(@deg);
+	-o-transform: rotate(@deg);
+	-ms-transform: rotate(@deg);
+	transform: rotate(@deg);
+}
+
+._rotate_30(){
+	._rotate(30deg);
+	._rotate_ie(30deg); /* ._rotate_ie(0.866025, 0.5); */
+}
+._rotate_45(){
+	._rotate(45deg);
+	._rotate_ie(45deg); /*._rotate_ie7_ie8(0.707107, 0.707107);*/
+}
+._rotate_60(){
+	._rotate(60deg);
+	._rotate_ie(60deg); /* ._rotate_ie7_ie8(0.5, 0.866025);*/
+}
+._rotate_90(){
+	._rotate(90deg);
+	._rotate_ie(90deg); /*._rotate_ie7_ie8(0, 1);*/
+}
+._rotate_120(){
+	._rotate(120deg);
+	._rotate_ie(120deg); /*._rotate_ie7_ie8(-0.5, 0.866025);*/
+}
+._rotate_135(){
+	._rotate(135deg);
+	._rotate_ie(135deg); /*._rotate_ie7_ie8(-0.707107, 0.707107);*/
+}
+._rotate_150(){
+	._rotate(150deg);
+	._rotate_ie(150deg); /*._rotate_ie7_ie8(-0.866025, 0.5);*/
+}
+._rotate_180(){
+	._rotate(180deg);
+	._rotate_ie(180deg); /*._rotate_ie7_ie8(-1, 0);*/
+}
+._rotate_210(){
+	._rotate(210deg);
+	._rotate_ie(210deg);/*._rotate_ie7_ie8(-0.866025, -0.5);*/
+}
+._rotate_225(){
+	._rotate(225deg);
+	._rotate_ie(225deg); /*._rotate_ie7_ie8(-0.707107, -0.707107);*/
+}
+._rotate_240(){
+   ._rotate(240deg);
+	._rotate_ie(240deg); /*._rotate_ie7_ie8(-0.5, -0.866025);*/
+}
+._rotate_270(){
+	._rotate(270deg);
+	._rotate_ie(270deg); /*._rotate_ie7_ie8(0, -1);*/
+}
+._rotate_300(){
+   ._rotate(300deg);
+	._rotate_ie(300deg); /*._rotate_ie7_ie8(0.5, -0.866025);*/
+}
+._rotate_315(){
+	._rotate(315deg);
+	._rotate_ie(300deg); /*._rotate_ie7_ie8(0.707107, -0.707107);*/
+}
+._rotate_330(){
+	._rotate(330deg);
+	._rotate_ie(330deg); /*._rotate_ie7_ie8(0.866025, -0.5);*/
+}
+._rotate_360(){
+	._rotate(360deg);
+	._rotate_ie(360deg); /*._rotate_ie7_ie8(1, 0);*/
+}
+
+
+._grad_v_ie(@startColor, @endColor){
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d',endColorstr='%d',GradientType=0)", @startColor, @endColor));
+	-ms-filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d',endColorstr='%d',GradientType=0)", @startColor, @endColor));
+}
+
+._grad_h_ie(@startColor, @endColor){
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor));
+	-ms-filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor));
+}
+
+._grad_v(@startColor, @endColor){
+	background-color: @endColor;
+	background-image: -moz-linear-gradient(@startColor, @endColor);
+	background-image: -ms-linear-gradient(@startColor, @endColor);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor));
+	background-image: -webkit-linear-gradient(@startColor, @endColor);
+	background-image: -o-linear-gradient(@startColor, @endColor);
+	background-image: linear-gradient(@startColor, @endColor);
+}
+
+._grad_h(@startColor, @endColor){
+	background-color: @endColor;
+	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0%,@startColor), color-stop(100%, @endColor));
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+	background-image: -o-linear-gradient(left, @startColor, @endColor);
+	background-image: linear-gradient(left, @startColor, @endColor);
+}
+
+._grad_v_multi(@startColor, @midColor1, @midColor2, @endColor){
+	background: @endColor;
+	background: -moz-linear-gradient(top, @startColor 0%, @midColor1 50%, @midColor2 51%, @endColor 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@startColor), color-stop(50%,@midColor1), color-stop(51%,@midColor2), color-stop(100%,@endColor));
+	background-image: linear-gradient(top, @startColor 0%, @midColor1 50%, @midColor2 51%, @endColor 100%);
+}
+
+._grad_h_multi(@startColor, @midColor1, @midColor2, @endColor){
+	background: @startColor;
+	background: -moz-linear-gradient(left,  @startColor 0%, @midColor1 50%, @midColor2 51%, @endColor 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,@startColor), color-stop(50%,@midColor1), color-stop(51%,@midColor2), color-stop(100%,@endColor));
+	background: -webkit-linear-gradient(left,  @startColor 0%,@midColor1 50%,@midColor2 51%,@endColor 100%);
+	background: -o-linear-gradient(left,  @startColor 0%,@midColor1 50%,@midColor2 51%,@endColor 100%);
+	background: -ms-linear-gradient(left,  @startColor 0%,@midColor1 50%,@midColor2 51%,@endColor 100%);
+	background: linear-gradient(to right,  @startColor 0%,@midColor1 50%,@midColor2 51%,@endColor 100%);
+}
+
+._grad_radial(@innerColor: #555, @outerColor: #333) {
+	background-color: @outerColor;
+	background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
+	background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
+	background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
+	background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
+	background-repeat: no-repeat;
+}
+
+._background_size(@size){
+	-moz-background-size: @size;
+	-o-background-size: @size;
+	-webkit-background-size: @size;
+	background-size: @size;
+}
+
+._opacity(@rate){
+	@ierate: @rate * 100;
+	filter: e("progid:DXImageTransform.Microsoft.Alpha(opacity=@{ierate})"); /* IE 5.5+*/
+	-moz-opacity: @rate; /* Mozilla 1.6 и ниже */
+	opacity: @rate; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9+ */
+
+}
+
+._opacity-i(@rate){
+	@ierate: @rate * 100;
+	filter:e("progid:DXImageTransform.Microsoft.Alpha(opacity=@{ierate})") !important; /* IE 5.5+*/
+	-moz-opacity: @rate !important; /* Mozilla 1.6 и ниже */
+	opacity: @rate !important; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9+ */
+}

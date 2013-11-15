@@ -1,0 +1,198 @@
+._circle(@size){
+    /*this element MUST BE BLOCK or INLINE-BLOCK*/
+    ._size(@size);
+    ._border_radius(@size);
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+
+._circle_color(@background){
+    background: @background;
+}
+
+._circle_border(@border){
+    border: @border;
+}
+
+._circle(@size, @background){
+    ._circle_color(@background);
+    ._circle(@size);
+}
+
+._circle(@size, @background, @border){
+    ._circle_border(@border);
+    ._circle(@size, @background);
+}
+
+._counter(@attr_name, @font_size, @bg, @color, @opacity: 1, @right: -3px, @bottom: -5px){
+    &{ position: relative; }
+    &:after {
+        content: attr(@attr_name);
+        ._opacity(@opacity);
+        display: block;
+        color: @color;
+        font-weight: bold;
+        position: absolute;
+        bottom: @bottom;
+        right: @right;
+        ._text(@font_size);
+        background: @bg;
+        ._border_radius(2px);
+        padding: 2px;
+    }
+}
+
+
+/*TRIANGLE*/
+._fr_triangle(){ /*PRIVATE FUNCTION ONLY !!! NEVER USE THIS IN PROJECTS!!!*/
+	._inline_block();
+	width: 0;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	content: ""; /*FOR :after and :before*/
+	overflow: hidden;
+	border-style: solid;
+}
+
+._triangle_color(@color){
+	border-color: rgba(255, 255, 255, 0); /*FIX MOZILA BUG*/
+	border-color: @color;
+}
+._triangle_size(@size){
+	border-width: @size;
+}
+
+/*BOTTOM*/
+._triangle_bottom(){
+	._fr_triangle();
+	border-left-color: transparent !important;
+	border-right-color: transparent !important;
+	border-bottom-color: transparent !important;
+}
+._triangle_bottom(@size){
+	._triangle_bottom();
+	._triangle_size(@size);
+}
+._triangle_bottom(@size, @color){
+	._triangle_bottom();
+	._triangle_size(@size);
+	._triangle_color(@color);
+}
+
+/*TOP*/
+._triangle_top(){
+	._fr_triangle();
+	border-top-color: transparent !important;
+	border-left-color: transparent !important;
+	border-right-color: transparent !important;
+}
+._triangle_top(@size){
+	._triangle_top();
+	._triangle_size(@size);
+}
+._triangle_top(@size, @color){
+	._triangle_top();
+	._triangle_size(@size);
+	._triangle_color(@color);
+}
+
+/*LEFT*/
+._triangle_left(){
+	._fr_triangle();
+	border-top-color: transparent !important;
+	border-left-color: transparent !important;
+	border-bottom-color: transparent !important;
+}
+._triangle_left(@size){
+	._triangle_left();
+	._triangle_size(@size);
+}
+._triangle_left(@size, @color){
+	._triangle_left();
+	._triangle_size(@size);
+	._triangle_color(@color);
+}
+
+/*RIGHT*/
+._triangle_right(){
+	._fr_triangle();
+	border-top-color: transparent !important;
+	border-right-color: transparent !important;
+	border-bottom-color: transparent !important;
+}
+._triangle_right(@size){
+	._triangle_right();
+	._triangle_size(@size);
+}
+._triangle_right(@size, @color){
+	._triangle_right();
+	._triangle_size(@size);
+	._triangle_color(@color);
+}
+
+/*RIGHT TOP*/
+._triangle_right_top(){
+	._fr_triangle();
+	border-top-color: transparent !important;
+	border-right-color: transparent !important;
+}
+._triangle_right_top(@size){
+	._triangle_right_top();
+	._triangle_size(@size);
+}
+._triangle_right_top(@size, @color){
+	._triangle_right_top();
+	._triangle_size(@size);
+	._triangle_color(@color);
+}
+
+/*RIGHT BOTTOM*/
+._triangle_right_bottom(){
+	._fr_triangle();
+	border-bottom-color: transparent !important;
+	border-right-color: transparent !important;
+}
+._triangle_right_bottom(@size){
+	._triangle_right_bottom();
+	._triangle_size(@size);
+}
+._triangle_right_bottom(@size, @color){
+	._triangle_right_bottom();
+	._triangle_size(@size);
+	._triangle_color(@color);
+}
+
+/*LEFT TOP*/
+._triangle_left_top(){
+	._fr_triangle();
+	border-top-color: transparent !important;
+	border-left-color: transparent !important;
+}
+._triangle_left_top(@size){
+	._triangle_left_top();
+	._triangle_size(@size);
+}
+
+._triangle_left_top(@size, @color){
+	._triangle_left_top();
+	._triangle_size(@size);
+	._triangle_color(@color);
+}
+
+/*LEFT BOTTOM*/
+._triangle_left_bottom(){
+	._fr_triangle();
+	border-left-color: transparent !important;
+	border-bottom-color: transparent !important;
+}
+._triangle_left_bottom(@size){
+	._triangle_left_bottom();
+	._triangle_size(@size);
+}
+._triangle_left_bottom(@size, @color){
+	._triangle_left_bottom();
+	._triangle_size(@size);
+	._triangle_color(@color);
+}

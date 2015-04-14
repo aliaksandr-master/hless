@@ -48,6 +48,13 @@
    transition: @elements @time @easing;
 }
 
+._accelerate_animation () {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
 ._transition(@transition) {
 	-webkit-transition: @transition;
 	-moz-transition: @transition;
@@ -102,12 +109,14 @@
 }
 
 ._rotate_ie (@deg) {
-	._rotate_ie7_ie8(cos(@deg), sin(@deg));
+	@cos: cos(@deg);
+	@sin: sin(@deg);
+	@_sin: @sin * -1;
+	filter: e('progid:DXImageTransform.Microsoft.Matrix(M11=@{cos}, M12=@{_sin}, M21=@{sin}, M22=@{cos}, SizingMethod="auto expand", enabled=true)');
 }
 
 ._rotate_ie7_ie8 (@cos, @sin) {
-   @_sin: @sin * -1;
-   filter: e('progid:DXImageTransform.Microsoft.Matrix(M11=@{cos}, M12=@{_sin}, M21=@{sin}, M22=@{cos}, SizingMethod="auto expand", enabled=true)');
+
 }
 
 ._rotate (@deg) {

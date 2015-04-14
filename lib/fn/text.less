@@ -1,14 +1,14 @@
 /*set font, font size, line height, color*/
-._text(@f-size, @l-height){
+._text (@f-size, @l-height) {
    font-size: @f-size;
    line-height: @l-height;
 }
 
-._text(@size){
+._text (@size) {
    ._text(@size, @size);
 }
 
-._text_hide(){
+._text_hide () {
     font: 0/0 a;
     color: transparent;
     text-shadow: none;
@@ -17,18 +17,20 @@
 }
 
 /*Mouse Text Selection*/
-._selection(@bg, @color: #fff, @shadow: none){
-   *::-moz-selection{
+._selection (@bg, @color: #fff, @shadow: none) {
+   &::-moz-selection {
       background: @bg;
       color: @color;
       text-shadow: @shadow;
    }
-   *::-webkit-selection{
+
+   &::-webkit-selection {
       background: @bg;
       color: @color;
       text-shadow: @shadow;
    }
-   *::selection{
+
+   &::selection {
       background: @bg;
       color: @color;
       text-shadow: @shadow;
@@ -36,7 +38,7 @@
 }
 
 /*disabled text seclection for element*/
-._selection_disabled(@color: #444){
+._selection_disabled (@color: #444) {
     ._selection(transparent, @color);
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -47,31 +49,30 @@
 
 /*placeholder for FORM elements*/
 ._placeholder(@color, @font_style: italic){
-    /*http://code.google.com/p/chromium/issues/detail?id=72413*/
-    .placeholder,
-    .watermark {
+    /* fix http://code.google.com/p/chromium/issues/detail?id=72413 */
+
+    &::-webkit-input-placeholder {
         color: @color !important;
         font-style: @font_style;
     }
-    ::-webkit-input-placeholder {
+
+    &:-moz-placeholder {
         color: @color !important;
         font-style: @font_style;
     }
-    :-moz-placeholder {
+
+    &:-ms-input-placeholder {
         color: @color !important;
         font-style: @font_style;
     }
-    :-ms-input-placeholder {
-        color: @color !important;
-        font-style: @font_style;
-    }
+
     input[type=number] {
         text-align: left;
     }
 }
 
 /*One Line Text Overflow*/
-._text_overflow(@overflow: ellipsis, @wrap: nowrap){
+._text_overflow (@overflow: ellipsis, @wrap: nowrap) {
    overflow: hidden;
    -o-text-overflow: @overflow;
    text-overflow: @overflow;
@@ -79,17 +80,24 @@
 }
 
 /* LINK STYLES */
-._link(@normal, @hover, @active, @visited, @td_normal: underline, @td_focus: none){
+._link (@normal, @hover, @active, @visited, @td_normal: underline, @td_focus: none) {
 	&,
 	&:link {
 		color: @normal;
 		text-decoration: @td_normal;
 	}
-	&:visited { color: @visited; }
+
+	&:visited {
+        color: @visited;
+    }
+
 	&:hover,
 	&:focus {
 		color: @hover;
 		text-decoration: @td_focus;
 	}
-	&:active { color: @active; }
+
+	&:active {
+        color: @active;
+    }
 }

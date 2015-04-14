@@ -4,12 +4,12 @@
 [![Build Status](https://travis-ci.org/aliaksandr-pasynkau/hless.svg?branch=master&style=flat-square)](https://travis-ci.org/aliaksandr-pasynkau/hless)
 
 # HLESS
-Small powerfull library for less preprocessor of css. 
+Small powerfull mixin library for less preprocessor of css. 
 
 Css utils and css hacks kit.
 
 ## Usage
-To install generator-node-lib from npm, run:
+To install hless from npm, run:
 
 ```shell
 # npm:

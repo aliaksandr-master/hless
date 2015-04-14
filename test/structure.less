@@ -1,2 +1,25 @@
 @import "../lib/index";
 
+.box-sizing { ._box_sizing(border-box); }
+
+.inline-block{ ._inline_block(); }
+.inline-block{ ._inline_block(bottom); }
+
+.center { ._center(); }
+.center-2 { ._center(200px); }
+
+.size { ._size(200px, 200px); }
+.size-2 { ._size(200px); }
+
+.justify-parent { ._block_justify_parent(); }
+.justify-child { ._block_justify_child(); }
+.justify-child-2 { ._block_justify_child(12px, 1.2); }
+
+.middle { ._position_middle(12px); }
+.middle-child { ._position_middle_child(); }
+.middle-parent { ._position_middle_parent(); }
+.middle-parent-2 { ._position_middle_parent(12px); }
+
+.clearfix { ._clearfix(); }
+.clearfix-2 { ._clearfix_hard(); }
+

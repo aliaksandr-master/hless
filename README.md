@@ -159,9 +159,15 @@ Finally, use in your `less` file:
 ```
 
 ### Similar and additional projects
-[less-elements](http://lesselements.com/)
+You can use this library with another less libraries without name conflicts. This is good idea. 
 
-Thank you for usage
+- [less-elements](http://lesselements.com/)
+- [lesshat](https://github.com/madebysource/lesshat)
+- [animate.less](https://github.com/machito/animate.less)
+- [less-mixins](https://github.com/drublic/less-mixins)
+
+
+### Thank you for usage
 
 ## License
 MIT

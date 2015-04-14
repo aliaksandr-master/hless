@@ -9,66 +9,66 @@
 }
 
 ._text_hide () {
-    font: 0/0 a;
-    color: transparent;
-    text-shadow: none;
-    background-color: transparent;
-    border: 0;
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
 }
 
 // Mouse Text Selection
 ._selection (@bg, @color: #fff, @shadow: none) {
    &::-moz-selection {
-      background: @bg;
-      color: @color;
-      text-shadow: @shadow;
+	  background: @bg;
+	  color: @color;
+	  text-shadow: @shadow;
    }
 
    &::-webkit-selection {
-      background: @bg;
-      color: @color;
-      text-shadow: @shadow;
+	  background: @bg;
+	  color: @color;
+	  text-shadow: @shadow;
    }
 
    &::selection {
-      background: @bg;
-      color: @color;
-      text-shadow: @shadow;
+	  background: @bg;
+	  color: @color;
+	  text-shadow: @shadow;
    }
 }
 
 // disabled text seclection for element
 ._selection_disabled (@color: #444) {
-    ._selection(transparent, @color);
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+	._selection(transparent, @color);
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 // placeholder for FORM elements
 ._placeholder(@color, @font_style: italic){
-    // fix http://code.google.com/p/chromium/issues/detail?id=72413
+	// fix http://code.google.com/p/chromium/issues/detail?id=72413
 
-    &::-webkit-input-placeholder {
-        color: @color !important;
-        font-style: @font_style;
-    }
+	&::-webkit-input-placeholder {
+		color: @color !important;
+		font-style: @font_style;
+	}
 
-    &:-moz-placeholder {
-        color: @color !important;
-        font-style: @font_style;
-    }
+	&:-moz-placeholder {
+		color: @color !important;
+		font-style: @font_style;
+	}
 
-    &:-ms-input-placeholder {
-        color: @color !important;
-        font-style: @font_style;
-    }
+	&:-ms-input-placeholder {
+		color: @color !important;
+		font-style: @font_style;
+	}
 
-    input[type=number] {
-        text-align: left;
-    }
+	input[type=number] {
+		text-align: left;
+	}
 }
 
 // One Line Text Overflow
@@ -88,8 +88,8 @@
 	}
 
 	&:visited {
-        color: @visited;
-    }
+		color: @visited;
+	}
 
 	&:hover,
 	&:focus {
@@ -98,6 +98,6 @@
 	}
 
 	&:active {
-        color: @active;
-    }
+		color: @active;
+	}
 }

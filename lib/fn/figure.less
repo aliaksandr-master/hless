@@ -1,47 +1,47 @@
 ._circle (@size) {
-    // this element MUST BE BLOCK or INLINE-BLOCK
-    ._size(@size);
-    ._border_radius(@size);
-    overflow: hidden;
-    text-align: center;
-    vertical-align: middle;
+	// this element MUST BE BLOCK or INLINE-BLOCK
+	._size(@size);
+	._border_radius(@size);
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
 }
 
 ._circle_color (@background) {
-    background: @background;
+	background: @background;
 }
 
 ._circle_border (@border) {
-    border: @border;
+	border: @border;
 }
 
 ._circle (@size, @background) {
-    ._circle_color(@background);
-    ._circle(@size);
+	._circle_color(@background);
+	._circle(@size);
 }
 
 ._circle (@size, @background, @border) {
-    ._circle_border(@border);
-    ._circle(@size, @background);
+	._circle_border(@border);
+	._circle(@size, @background);
 }
 
 ._counter (@attr_name, @font_size, @bg, @color, @opacity: 1, @right: -3px, @bottom: -5px) {
-    position: relative;
+	position: relative;
 
-    &:after {
-        content: attr(@attr_name);
-        ._opacity(@opacity);
-        display: block;
-        color: @color;
-        font-weight: bold;
-        position: absolute;
-        bottom: @bottom;
-        right: @right;
-        ._text(@font_size);
-        background: @bg;
-        ._border_radius(2px);
-        padding: 2px;
-    }
+	&:after {
+		content: attr(@attr_name);
+		._opacity(@opacity);
+		display: block;
+		color: @color;
+		font-weight: bold;
+		position: absolute;
+		bottom: @bottom;
+		right: @right;
+		._text(@font_size);
+		background: @bg;
+		._border_radius(2px);
+		padding: 2px;
+	}
 }
 
 // TRIANGLE

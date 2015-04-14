@@ -1,0 +1,34 @@
+@import "../lib/index";
+
+.radius { ._border_radius(4px); }
+.radius-t-l { ._border_radius_top_left(4px); }
+.radius-t-r { ._border_radius_top_right(4px); }
+.radius-b-r { ._border_radius_bottom_right(4px); }
+.radius-b-l { ._border_radius_bottom_left(4px); }
+
+.shadow { ._box_shadow(1px 2px 3px white); }
+.shadow-2 { ._box_shadow(1px 2px 3px white, 1px 2px 3px white); }
+
+.animate { ._animate(3s, ease-in, all); }
+.animate-2 { ._transition(all 3s ease-in); }
+.animate-delay { ._transition_delay(3s); }
+.animate-duration { ._transition_duration(3s); }
+.animate-accelerate { ._accelerate_animation; }
+
+.transform-scale { ._transform_scale(2); }
+.transform-translate { ._transform_translate(350px,0); }
+.transform-skew { ._transform_skew(50px, 100px); }
+.transform-translate3d { ._transform_translate3d(1, 1, 1); }
+
+.transform-rotate-ie { ._rotate_ie(20deg); }
+.transform-rotate { ._rotate(20deg); }
+
+.grad-v-ie { ._grad_v_ie(#000000, #999999); }
+.grad-h-ie { ._grad_h_ie(#000000, #999999); }
+.grad-v { ._grad_v(#000000, #999999); }
+.grad-h { ._grad_h(#000000, #999999); }
+.grad-v-m { ._grad_v_multi(#000000, #999999,#000000, #999999); }
+.grad-h-m { ._grad_h_multi(#000000, #999999,#000000, #999999); }
+.grad-radial { ._grad_radial(#000000, #999999); }
+.grad-size { ._background_size(300px 300px); }
+.grad-opacity { ._opacity(0.4); }

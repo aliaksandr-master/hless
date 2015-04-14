@@ -1,5 +1,20 @@
-/.idea/
-/node_modules/
-/bower_components/
-*.iml
-*.DS_Store
+# ide and os files
+/.idea
+**/*.DS_Store
+**/*.kate-swp
+**/*.desktop
+**/*.thumb
+**/*.sublime*
+**/.~*
+**/~*
+**/*~
+ 
+# npm
+/npm-debug.log
+/node_modules
+ 
+# bower 
+/bower_components
+ 
+# tmp files
+.tmp

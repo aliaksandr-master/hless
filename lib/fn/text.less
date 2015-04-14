@@ -1,4 +1,4 @@
-/*set font, font size, line height, color*/
+// set font, font size, line height, color
 ._text (@f-size, @l-height) {
    font-size: @f-size;
    line-height: @l-height;
@@ -16,7 +16,7 @@
     border: 0;
 }
 
-/*Mouse Text Selection*/
+// Mouse Text Selection
 ._selection (@bg, @color: #fff, @shadow: none) {
    &::-moz-selection {
       background: @bg;
@@ -37,7 +37,7 @@
    }
 }
 
-/*disabled text seclection for element*/
+// disabled text seclection for element
 ._selection_disabled (@color: #444) {
     ._selection(transparent, @color);
     -moz-user-select: none;
@@ -47,9 +47,9 @@
     user-select: none;
 }
 
-/*placeholder for FORM elements*/
+// placeholder for FORM elements
 ._placeholder(@color, @font_style: italic){
-    /* fix http://code.google.com/p/chromium/issues/detail?id=72413 */
+    // fix http://code.google.com/p/chromium/issues/detail?id=72413
 
     &::-webkit-input-placeholder {
         color: @color !important;
@@ -71,7 +71,7 @@
     }
 }
 
-/*One Line Text Overflow*/
+// One Line Text Overflow
 ._text_overflow (@overflow: ellipsis, @wrap: nowrap) {
    overflow: hidden;
    -o-text-overflow: @overflow;
@@ -79,7 +79,7 @@
    white-space: @wrap;
 }
 
-/* LINK STYLES */
+// LINK STYLES
 ._link (@normal, @hover, @active, @visited, @td_normal: underline, @td_focus: none) {
 	&,
 	&:link {

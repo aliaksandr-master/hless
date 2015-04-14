@@ -1,5 +1,4 @@
 ._box_sizing (@type) {
-    /* @type : border-box */
     -webkit-box-sizing: @type;
     -moz-box-sizing: @type;
     -o-box-sizing: @type;
@@ -29,7 +28,7 @@
     width: @w;
 }
 
-/*BLOCK SIZE*/
+// BLOCK SIZE
 ._size (@w, @h) {
     width: @w;
     height: @h;
@@ -40,9 +39,9 @@
     height: @w;
 }
 
-/*for box justify*/
+// for box justify
 ._block_justify_parent () {
-    /*Firefox 3+,Opera11.51+,IE6+,Safari5.1,Chrome*/
+    // Firefox 3+,Opera11.51+,IE6+,Safari5.1,Chrome
     text-align: justify;
     text-justify: newspaper;
     text-align-last: justify;

@@ -1,5 +1,5 @@
 ._circle (@size) {
-    /* this element MUST BE BLOCK or INLINE-BLOCK */
+    // this element MUST BE BLOCK or INLINE-BLOCK
     ._size(@size);
     ._border_radius(@size);
     overflow: hidden;
@@ -44,20 +44,21 @@
     }
 }
 
-/*TRIANGLE*/
-._fr_triangle () { /*PRIVATE FUNCTION ONLY !!! NEVER USE THIS IN PROJECTS!!!*/
+// TRIANGLE
+._fr_triangle () {
+	// PRIVATE FUNCTION ONLY !!! NEVER USE THIS IN PROJECTS!!!
 	._inline_block();
 	width: 0;
 	height: 0;
 	line-height: 0;
 	font-size: 0;
-	content: ""; /*FOR :after and :before*/
+	content: ""; // FOR :after and :before
 	overflow: hidden;
 	border-style: solid;
 }
 
 ._triangle_color (@color) {
-	border-color: rgba(255, 255, 255, 0); /*FIX MOZILA BUG*/
+	border-color: rgba(255, 255, 255, 0); // FIX MOZILA BUG
 	border-color: @color;
 }
 
@@ -65,7 +66,7 @@
 	border-width: @size;
 }
 
-/*BOTTOM*/
+// BOTTOM
 ._triangle_bottom () {
 	._fr_triangle();
 	border-left-color: transparent !important;
@@ -84,7 +85,7 @@
 	._triangle_color(@color);
 }
 
-/*TOP*/
+// TOP
 ._triangle_top () {
 	._fr_triangle();
 	border-top-color: transparent !important;
@@ -103,7 +104,7 @@
 	._triangle_color(@color);
 }
 
-/*LEFT*/
+// LEFT
 ._triangle_left () {
 	._fr_triangle();
 	border-top-color: transparent !important;
@@ -122,7 +123,7 @@
 	._triangle_color(@color);
 }
 
-/*RIGHT*/
+// RIGHT
 ._triangle_right () {
 	._fr_triangle();
 	border-top-color: transparent !important;
@@ -141,7 +142,7 @@
 	._triangle_color(@color);
 }
 
-/*RIGHT TOP*/
+// RIGHT TOP
 ._triangle_right_top () {
 	._fr_triangle();
 	border-top-color: transparent !important;
@@ -159,7 +160,7 @@
 	._triangle_color(@color);
 }
 
-/*RIGHT BOTTOM*/
+// RIGHT BOTTOM
 ._triangle_right_bottom () {
 	._fr_triangle();
 	border-bottom-color: transparent !important;
@@ -177,7 +178,7 @@
 	._triangle_color(@color);
 }
 
-/*LEFT TOP*/
+// LEFT TOP
 ._triangle_left_top () {
 	._fr_triangle();
 	border-top-color: transparent !important;
@@ -195,7 +196,7 @@
 	._triangle_color(@color);
 }
 
-/*LEFT BOTTOM*/
+// LEFT BOTTOM
 ._triangle_left_bottom () {
 	._fr_triangle();
 	border-left-color: transparent !important;

@@ -1,0 +1,24 @@
+{
+  "name": "hless",
+  "version": "1.1.0",
+  "description": "Powerfull library for lesscss preprocessor",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://aliaksandr-pasynkau@github.com/aliaksandr-pasynkau/hless.git"
+  },
+  "keywords": [
+    "lesscss",
+    "css",
+    "less"
+  ],
+  "author": "aliaksandr-pasynkau <alxe.master@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aliaksandr-pasynkau/hless/issues"
+  },
+  "homepage": "https://github.com/aliaksandr-pasynkau/hless"
+}

@@ -1,6 +1,7 @@
 [![npm](http://img.shields.io/npm/v/hless.svg?style=flat-square)](https://www.npmjs.com/package/hless)
 [![Bower](https://img.shields.io/bower/v/hless.svg?style=flat-square)](https://github.com/aliaksandr-pasynkau/hless)
 [![npm](http://img.shields.io/npm/l/hless.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/aliaksandr-pasynkau/hless.svg?branch=master&style=flat-square)](https://travis-ci.org/aliaksandr-pasynkau/hless)
 
 # HLESS
 Small powerfull library for less preprocessor of css. 

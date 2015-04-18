@@ -59,6 +59,9 @@ Finally, use in your `less` file:
 // counter
 ._counter(@attr_name, @font_size, @bg, @color, @opacity: 1, @right: -3px, @bottom: -5px);
 
+// rectangle
+._ratio(@width, @height, @element: 'after');
+
 // circle
 ._circle(@size);
 ._circle_color(@background);

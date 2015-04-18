@@ -1,3 +1,24 @@
+// RECTANGLE
+._ratio_ (@width, @height) {
+	content: '';
+	visibility: hidden;
+	display: block;
+	padding-bottom: (@height / @width) * 100%;
+}
+
+._ratio (@width, @height, @element: 'after') when (@element = 'after') {
+	&:after {
+		._ratio_(@width, @height);
+	}
+}
+
+._ratio (@width, @height, @element: 'after') when (@element = 'before') {
+	&:before {
+		._ratio_(@width, @height);
+	}
+}
+
+// CIRCLE
 ._circle (@size) {
 	// this element MUST BE BLOCK or INLINE-BLOCK
 	._size(@size);
@@ -25,6 +46,7 @@
 	._circle(@size, @background);
 }
 
+// COUNTER
 ._counter (@attr_name, @font_size, @bg, @color, @opacity: 1, @right: -3px, @bottom: -5px) {
 	position: relative;
 

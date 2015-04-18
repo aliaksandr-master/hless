@@ -1,0 +1,223 @@
+._typo () {
+	color: @typo-color;
+	display: block;
+	font-family: @typo-font;
+	font-size: @typo-fs;
+	line-height: @typo-line-height;
+	position: static;
+	text-align: left;
+
+	a {
+		&,
+		&:link {
+			text-decoration: none;
+			color: @typo-color-anchor;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+
+		&:active,
+		&:visited {
+			color: darken(@typo-color-anchor, 15%);
+		}
+	}
+
+	p,
+	div,
+	ol,
+	ul,
+	li,
+	code,
+	pre,
+	address,
+	blockquote {
+		display: block;
+		font-weight: normal;
+		font-size: 1em;
+		margin: 0;
+		padding: 0;
+		position: static;
+		text-align: left;
+		white-space: normal;
+		word-break: normal;
+		position: static;
+		word-wrap: break-word;
+	}
+
+	img,
+	video,
+	embed,
+	object {
+		width: auto;
+		margin: 0 auto;
+		max-height: 100%;
+		max-width: 100%;
+	}
+
+	iframe {
+		display: block;
+	}
+
+	blockquote {
+		padding: 0 0 0 @typo-padding * 12;
+		margin: @typo-padding * 16 0 0 @typo-padding * 4;
+		font-style: italic;
+		font-size: @typo-fs-quote;
+		font-weight: normal;
+		font-family: @typo-font-quote;
+		color: darken(@typo-color-quote, 10%);
+		position: relative;
+		border: none;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: @typo-padding * 8;
+			border-left: 2px solid @typo-border-color-quote;
+			left: 0;
+			bottom: 0;
+		}
+
+		&:after {
+			content: '\201d';
+			position: absolute;
+			top: -14px;
+			left: -16px;
+			font-size: 70px;
+			font-weight: bold;
+			font-style: normal;
+			color: @typo-color-quote;
+		}
+	}
+
+	p,
+	address {
+		margin: 0 0 @typo-padding;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: @typo-font;
+		font-size: @typo-fs-h4;
+		color: @typo-color-header;
+		display: block;
+		line-height: @typo-line-height;
+		font-weight: @typo-weight-header;
+		margin: 0 0 @typo-padding-big;
+		padding: 0;
+		position: static;
+		text-align: left;
+		white-space: normal;
+		word-break: normal;
+	}
+
+	h1 {
+		font-size: @typo-fs-h1;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	h2 {
+		font-size: @typo-fs-h2;
+	}
+
+	h3 {
+		font-size: @typo-fs-h3;
+	}
+
+	hr {
+		margin: @typo-padding-big 0;
+		border-top: 1px solid @typo-border-color-hr;
+	}
+
+	b,
+	strong {
+		font-weight: bold;
+	}
+
+	i,
+	em {
+		font-style: italic;
+	}
+
+	u,
+	s {
+		text-decoration: underline;
+	}
+
+
+	// LISTS
+	ul,
+	ol {
+		overflow: hidden;
+	}
+
+	li {
+		display: list-item;
+		list-style-position: outside;
+		list-style-type: disc;
+		margin: 0 0 @typo-padding-big @typo-padding-list;
+	}
+
+	ol > li {
+		list-style-type: decimal;
+	}
+
+
+	// TABLE
+	th,
+	td {
+		border: 1px solid @typo-border-color-table;
+		font-size: @typo-fs;
+		line-height: @typo-line-height;
+		padding: @typo-padding-table;
+		text-align: left;
+		vertical-align: middle;
+		white-space: normal;
+
+		&[valign="top"] { vertical-align: top; }
+		&[valign="middle"] { vertical-align: middle; }
+		&[valign="bottom"] { vertical-align: bottom; }
+		&[align="left"] { text-align: left; }
+		&[align="right"] { text-align: right; }
+		&[align="center"] { text-align: center; }
+		&[nowrap="nowrap"] { white-space: nowrap; }
+	}
+
+	thead {
+		border-bottom: 3px solid @typo-border-color-table;
+
+		td,
+		th {
+			font-weight: bold;
+		}
+	}
+
+	table {
+		border-collapse: collapse;
+		font-family: @typo-font;
+		margin: @typo-padding-big 0;
+		width: 100%;
+	}
+
+
+	// CODE
+	pre {
+		border: 1px solid @typo-border-color-code;
+		font-family: @typo-font-code;
+		padding: @typo-padding-big @typo-padding-big * 2;
+		margin: @typo-padding-big 0;
+		white-space: nowrap !important;
+		word-wrap: normal;
+	}
+}

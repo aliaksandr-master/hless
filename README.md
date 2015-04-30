@@ -1,6 +1,8 @@
 [![npm](http://img.shields.io/npm/v/hless.svg?style=flat-square)](https://www.npmjs.com/package/hless)
 [![Bower](https://img.shields.io/bower/v/hless.svg?style=flat-square)](https://github.com/aliaksandr-pasynkau/hless)
 [![npm](http://img.shields.io/npm/l/hless.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![Dependency Status](https://david-dm.org/aliaksandr-pasynkau/hless.svg?style=flat-square)](https://david-dm.org/aliaksandr-pasynkau/hless)
+[![devDependency Status](https://david-dm.org/aliaksandr-pasynkau/hless/dev-status.svg?style=flat-square)](https://david-dm.org/aliaksandr-pasynkau/hless#info=devDependencies)
 [![Build Status](https://travis-ci.org/aliaksandr-pasynkau/hless.svg?branch=master&style=flat-square)](https://travis-ci.org/aliaksandr-pasynkau/hless)
 
 # HLESS

@@ -2,6 +2,11 @@
 	box-sizing: @type;
 }
 
+._maximize-height (@size: 99999px) {
+	padding-bottom: @size;
+	margin-bottom: -@size;
+}
+
 ._inline_block (@v-align: top) {
 	display: -moz-inline-stack;
 	display: inline-block;

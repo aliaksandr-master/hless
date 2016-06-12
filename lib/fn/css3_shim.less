@@ -1,0 +1,25 @@
+
+._rotate_ie (@deg) {
+	@cos: cos(@deg);
+	@sin: sin(@deg);
+	@_sin: @sin * -1;
+	filter: e('progid:DXImageTransform.Microsoft.Matrix(M11=@{cos}, M12=@{_sin}, M21=@{sin}, M22=@{cos}, SizingMethod="auto expand", enabled=true)');
+}
+
+._grad_v_ie (@startColor, @endColor) {
+	background-color: @endColor;
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d',endColorstr='%d',GradientType=0)", @startColor, @endColor));
+	-ms-filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d',endColorstr='%d',GradientType=0)", @startColor, @endColor));
+}
+
+._grad_h_ie (@startColor, @endColor) {
+	background-color: @endColor;
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor));
+	-ms-filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor));
+}
+
+._opacity_ie (@rate) {
+	@ierate: @rate * 100;
+	filter: e("progid:DXImageTransform.Microsoft.Alpha(opacity=@{ierate})"); // IE 5.5+
+	opacity: @rate; // CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9+
+}

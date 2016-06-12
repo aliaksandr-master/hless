@@ -1,33 +1,11 @@
-// set font, font size, line height, color
-._text (@f-size, @l-height) {
-   font-size: @f-size;
-   line-height: @l-height;
-}
-
-._text (@size) {
-   ._text(@size, @size);
-}
-
-._text_hide () {
-	font: 0/0 a;
-	color: transparent;
-	text-shadow: none;
-	background-color: transparent;
-	border: 0;
-}
-
-// Mouse Text Selection
-._selection (@bg, @color: #fff, @shadow: none) {
-   &::selection {
-	  background: @bg;
-	  color: @color;
-	  text-shadow: @shadow;
-   }
-}
 
 // disabled text seclection for element
 ._selection_disabled (@color: #444) {
-	._selection(transparent, @color);
+	&::selection {
+		background: transparent;
+		color: @color;
+		text-shadow: none;
+	}
 	user-select: none;
 }
 
@@ -58,30 +36,6 @@
 // One Line Text Overflow
 ._text_overflow (@overflow: ellipsis, @wrap: nowrap) {
    overflow: hidden;
-   -o-text-overflow: @overflow;
    text-overflow: @overflow;
    white-space: @wrap;
-}
-
-// LINK STYLES
-._link (@normal, @hover, @active, @visited, @td_normal: underline, @td_focus: none) {
-	&,
-	&:link {
-		color: @normal;
-		text-decoration: @td_normal;
-	}
-
-	&:visited {
-		color: @visited;
-	}
-
-	&:hover,
-	&:focus {
-		color: @hover;
-		text-decoration: @td_focus;
-	}
-
-	&:active {
-		color: @active;
-	}
 }

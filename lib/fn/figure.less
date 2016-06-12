@@ -6,44 +6,16 @@
 	padding-bottom: (@height / @width) * 100%;
 }
 
-._ratio (@width, @height, @element: 'after') when (@element = 'after') {
+._ratio (@width, @height) {
 	&:after {
 		._ratio_(@width, @height);
 	}
 }
 
-._ratio (@width, @height, @element: 'after') when (@element = 'before') {
+._ratio_before (@width, @height) {
 	&:before {
 		._ratio_(@width, @height);
 	}
-}
-
-// CIRCLE
-._circle (@size) {
-	// this element MUST BE BLOCK or INLINE-BLOCK
-	._size(@size);
-	._border_radius(@size);
-	overflow: hidden;
-	text-align: center;
-	vertical-align: middle;
-}
-
-._circle_color (@background) {
-	background: @background;
-}
-
-._circle_border (@border) {
-	border: @border;
-}
-
-._circle (@size, @background) {
-	._circle_color(@background);
-	._circle(@size);
-}
-
-._circle (@size, @background, @border) {
-	._circle_border(@border);
-	._circle(@size, @background);
 }
 
 // COUNTER
@@ -52,24 +24,24 @@
 
 	&:after {
 		content: attr(@attr_name);
-		._opacity(@opacity);
+		opacity: @opacity;
 		display: block;
 		color: @color;
 		font-weight: bold;
 		position: absolute;
 		bottom: @bottom;
 		right: @right;
-		._text(@font_size);
+		font-size: @font_size;
+		line-height: 1;
 		background: @bg;
-		._border_radius(2px);
+		border-radius: 2px;
 		padding: 2px;
 	}
 }
 
 // TRIANGLE
-._fr_triangle () {
-	// PRIVATE FUNCTION ONLY !!! NEVER USE THIS IN PROJECTS!!!
-	._inline_block();
+._fr_triangle_ () {
+	display: inline-block;
 	width: 0;
 	height: 0;
 	line-height: 0;
@@ -90,7 +62,7 @@
 
 // BOTTOM
 ._triangle_bottom () {
-	._fr_triangle();
+	._fr_triangle_();
 	border-left-color: transparent !important;
 	border-right-color: transparent !important;
 	border-bottom-color: transparent !important;
@@ -109,7 +81,7 @@
 
 // TOP
 ._triangle_top () {
-	._fr_triangle();
+	._fr_triangle_();
 	border-top-color: transparent !important;
 	border-left-color: transparent !important;
 	border-right-color: transparent !important;
@@ -128,7 +100,7 @@
 
 // LEFT
 ._triangle_left () {
-	._fr_triangle();
+	._fr_triangle_();
 	border-top-color: transparent !important;
 	border-left-color: transparent !important;
 	border-bottom-color: transparent !important;
@@ -147,7 +119,7 @@
 
 // RIGHT
 ._triangle_right () {
-	._fr_triangle();
+	._fr_triangle_();
 	border-top-color: transparent !important;
 	border-right-color: transparent !important;
 	border-bottom-color: transparent !important;
@@ -166,7 +138,7 @@
 
 // RIGHT TOP
 ._triangle_right_top () {
-	._fr_triangle();
+	._fr_triangle_();
 	border-top-color: transparent !important;
 	border-right-color: transparent !important;
 }
@@ -184,7 +156,7 @@
 
 // RIGHT BOTTOM
 ._triangle_right_bottom () {
-	._fr_triangle();
+	._fr_triangle_();
 	border-bottom-color: transparent !important;
 	border-right-color: transparent !important;
 }
@@ -202,7 +174,7 @@
 
 // LEFT TOP
 ._triangle_left_top () {
-	._fr_triangle();
+	._fr_triangle_();
 	border-top-color: transparent !important;
 	border-left-color: transparent !important;
 }
@@ -220,7 +192,7 @@
 
 // LEFT BOTTOM
 ._triangle_left_bottom () {
-	._fr_triangle();
+	._fr_triangle_();
 	border-left-color: transparent !important;
 	border-bottom-color: transparent !important;
 }

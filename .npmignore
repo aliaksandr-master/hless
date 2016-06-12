@@ -1,0 +1,14 @@
+.git/
+.tmp/
+.DS_Store
+*.xml
+*.iml
+.name
+*.orig
+npm-debug.log
+*_scsslint_*.js
+.editorconfig
+.travis.yml
+.gitattributes
+.gitignore
+LICENSE-MIT

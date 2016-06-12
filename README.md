@@ -33,14 +33,9 @@ Finally, use in your `less` file:
 // STRUCTURE ELEMENTS:
 ._box_sizing(@type);
 
-._inline_block();
-._inline_block(@v-align);
+._inline_block_old();
 
 ._center();
-._center(@width);
-
-._size(@w, @h);
-._size(@w);
 
 ._block_justify_parent();
 ._block_justify_child();
@@ -62,15 +57,8 @@ Finally, use in your `less` file:
 ._counter(@attr_name, @font_size, @bg, @color, @opacity: 1, @right: -3px, @bottom: -5px);
 
 // rectangle
-._ratio(@width, @height, @element: 'after');
-
-// circle
-._circle(@size);
-._circle_color(@background);
-._circle_border(@border);
-
-._circle(@size, @background);
-._circle(@size, @background, @border);
+._ratio(@width, @height);
+._ratio_before(@width, @height);
 
 // triangle
 ._triangle_color(@color);
@@ -112,56 +100,24 @@ Finally, use in your `less` file:
 
 
 // TEXT ELEMENTS
-._text(@f-size, @l-height);
-._text(@size);
-._text_hide(); 
 ._text_overflow(@overflow: ellipsis, @wrap: nowrap);
 
-._selection(@bg, @color: #fff, @shadow: none);
 ._selection_disabled(@color: #444);
 
 ._placeholder(@color, @font_style: italic);
 
-._link(@normal, @hover, @active, @visited, @td_normal: underline, @td_focus: none);
 
 
 
+// CSS3_shim 
 
-// CSS3 
-._border_radius(@r);
-._border_radius_top_left(@r);
-._border_radius_top_right(@r);
-._border_radius_bottom_right(@r);
-._border_radius_bottom_left(@r);
-
-._box_shadow(@a);
-._box_shadow(@a, @b);
-
-._animate(@time: 0.3s, @easing: linear, @elements: all);
-._transition(@transition);
-._transition_delay(@delay);
-._transition_duration(@duration);
-._transform_scale(@ratio);
-._transform_translate(@x, @y);
-._transform_skew(@x, @y);
-._transform_translate3d(@x, @y, @z);
-
-._rotate(@deg);
 ._rotate_ie(@deg);
 
-._grad_h(@startColor, @endColor);
 ._grad_h_ie(@startColor, @endColor);
 
-._grad_v(@startColor, @endColor);
 ._grad_v_ie(@startColor, @endColor);
 
-._grad_v_multi(@startColor, @midColor1, @midColor2, @endColor);
-._grad_h_multi(@startColor, @midColor1, @midColor2, @endColor);
-
-._grad_radial(@innerColor: #555, @outerColor: #333);
-._background_size(@size);
-
-._opacity(@rate);
+._opacity_ie(@rate);
 
 
 .base-typography {

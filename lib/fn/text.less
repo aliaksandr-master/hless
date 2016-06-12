@@ -18,18 +18,6 @@
 
 // Mouse Text Selection
 ._selection (@bg, @color: #fff, @shadow: none) {
-   &::-moz-selection {
-	  background: @bg;
-	  color: @color;
-	  text-shadow: @shadow;
-   }
-
-   &::-webkit-selection {
-	  background: @bg;
-	  color: @color;
-	  text-shadow: @shadow;
-   }
-
    &::selection {
 	  background: @bg;
 	  color: @color;
@@ -40,10 +28,6 @@
 // disabled text seclection for element
 ._selection_disabled (@color: #444) {
 	._selection(transparent, @color);
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
 	user-select: none;
 }
 

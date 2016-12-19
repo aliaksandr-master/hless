@@ -1,6 +1,6 @@
 {
   "name": "hless",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Powerfull library for lesscss preprocessor",
   "main": "less/index.less",
   "scripts": {

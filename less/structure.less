@@ -1,6 +1,3 @@
-._box_sizing (@type) {
-	box-sizing: @type;
-}
 
 ._grid-row (@margin: 0) {
 	display: block;
@@ -105,21 +102,6 @@
 	&:after{
 		content: " ";
 		display: table;
-		clear: both;
-	}
-}
-
-._clearfix_hard () {
-	&:before,
-	&:after{
-		content: ".";
-		display: block;
-		visibility: hidden;
-		line-height: 0;
-		height: 0;
-	}
-
-	&:after{
 		clear: both;
 	}
 }

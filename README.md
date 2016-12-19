@@ -46,10 +46,6 @@ Finally, use in your `less` file:
 ._position_middle_child();
 
 ._clearfix();
-._clearfix_hard();
-
-._box_sizing(@type); // deprecated
-._inline_block_old(); // deprecated
 
 
 
@@ -106,8 +102,6 @@ Finally, use in your `less` file:
 
 
 // TEXT ELEMENTS
-._text_overflow(@overflow: ellipsis, @wrap: nowrap);
-
 ._selection_disabled(@color: #444);
 
 ._placeholder(@color, @font_style: italic);

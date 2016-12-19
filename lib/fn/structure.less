@@ -2,6 +2,26 @@
 	box-sizing: @type;
 }
 
+._grid-row (@margin: 0) {
+	display: block;
+	margin-left: -@margin;
+	margin-right: -@margin;
+	._clearfix();
+}
+
+._grid-column (@factor, @margin: 0) {
+	float: left;
+	display: block;
+	box-sizing: border-box;
+	padding-left: @margin;
+	padding-right: @margin;
+	width: @factor * 100%;
+}
+
+._grid-column-factor (@factor) {
+	width: @factor * 100%;
+}
+
 ._maximize-height (@size: 99999px) {
 	padding-bottom: @size;
 	margin-bottom: -@size;

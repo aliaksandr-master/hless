@@ -35,6 +35,10 @@ Finally, use in your `less` file:
 
 ._inline_block_old();
 
+._grid-row(@margin: 0);
+._grid-column(@factor, @margin: 0);
+._grid-column-factor(@factor);
+
 ._center();
 
 ._block_justify_parent();

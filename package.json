@@ -2,7 +2,7 @@
   "name": "hless",
   "version": "3.0.0",
   "description": "Powerfull library for lesscss preprocessor",
-  "main": "",
+  "main": "less/index.less",
   "scripts": {
     "test": "node_modules/.bin/grunt less",
     "publish-package": "git push origin master --tags && npm publish && bower register hless https://github.com/aliaksandr-master/hless.git"

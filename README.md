@@ -124,41 +124,6 @@ Finally, use in your `less` file:
 ._grad_v_ie(@startColor, @endColor);
 
 ._opacity_ie(@rate);
-
-
-.base-typography {
-	@typo-fs: 16px;
-    @typo-fs-h1: 32px*1em/@typo-fs;
-    @typo-fs-h2: 27px*1em/@typo-fs;
-    @typo-fs-h3: 24px*1em/@typo-fs;
-    @typo-fs-h4: 18px*1em/@typo-fs;
-    @typo-fs-quote: 24px*1em/@typo-fs;
-
-    @typo-font: Arial, Helvetica, sans-serif;
-    @typo-font-code: 'Corner New', monospace;
-    @typo-font-quote: Georgia, 'Times New Roman', serif;
-
-    @typo-color: #444444;
-    @typo-color-anchor: #cb0000;
-    @typo-color-header: #000000;
-    @typo-color-quote: gray;
-
-    @typo-border-color-table: #dddddd;
-    @typo-border-color-code: @typo-border-color-table;
-    @typo-border-color-quote: @typo-color-anchor;
-    @typo-border-color-hr: @typo-border-color-table;
-
-    @typo-padding: 4px*1em/@typo-fs;
-    @typo-padding-big: 4*@typo-padding;
-    @typo-padding-table: @typo-padding;
-    @typo-padding-list: 8*@typo-padding;
-
-    @typo-line-height: 1.4;
-
-    @typo-weight-header: bold;
-
-	._typo();
-}
 ```
 
 ### Similar and additional projects

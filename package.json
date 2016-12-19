@@ -5,23 +5,23 @@
   "main": "",
   "scripts": {
     "test": "node_modules/.bin/grunt less",
-    "publish-package": "git push origin master --tags && npm publish && bower register hless https://github.com/aliaksandr-pasynkau/hless.git"
+    "publish-package": "git push origin master --tags && npm publish && bower register hless https://github.com/aliaksandr-master/hless.git"
   },
   "repository": {
     "type": "git",
-    "url": "https://aliaksandr-pasynkau@github.com/aliaksandr-pasynkau/hless.git"
+    "url": "https://aliaksandr-master@github.com/aliaksandr-master/hless.git"
   },
   "keywords": [
     "lesscss",
     "css",
     "less"
   ],
-  "author": "aliaksandr-pasynkau <alxe.master@gmail.com>",
+  "author": "aliaksandr-master <alxe.master@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aliaksandr-pasynkau/hless/issues"
+    "url": "https://github.com/aliaksandr-master/hless/issues"
   },
-  "homepage": "https://github.com/aliaksandr-pasynkau/hless",
+  "homepage": "https://github.com/aliaksandr-master/hless",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",

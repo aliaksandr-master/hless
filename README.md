@@ -1,9 +1,9 @@
 [![npm](http://img.shields.io/npm/v/hless.svg?style=flat-square)](https://www.npmjs.com/package/hless)
-[![Bower](https://img.shields.io/bower/v/hless.svg?style=flat-square)](https://github.com/aliaksandr-pasynkau/hless)
+[![Bower](https://img.shields.io/bower/v/hless.svg?style=flat-square)](https://github.com/aliaksandr-master/hless)
 [![npm](http://img.shields.io/npm/l/hless.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![Dependency Status](https://david-dm.org/aliaksandr-pasynkau/hless.svg?style=flat-square)](https://david-dm.org/aliaksandr-pasynkau/hless)
-[![devDependency Status](https://david-dm.org/aliaksandr-pasynkau/hless/dev-status.svg?style=flat-square)](https://david-dm.org/aliaksandr-pasynkau/hless#info=devDependencies)
-[![Build Status](https://travis-ci.org/aliaksandr-pasynkau/hless.svg?branch=master&style=flat-square)](https://travis-ci.org/aliaksandr-pasynkau/hless)
+[![Dependency Status](https://david-dm.org/aliaksandr-master/hless.svg?style=flat-square)](https://david-dm.org/aliaksandr-master/hless)
+[![devDependency Status](https://david-dm.org/aliaksandr-master/hless/dev-status.svg?style=flat-square)](https://david-dm.org/aliaksandr-master/hless#info=devDependencies)
+[![Build Status](https://travis-ci.org/aliaksandr-master/hless.svg?branch=master&style=flat-square)](https://travis-ci.org/aliaksandr-master/hless)
 
 # HLESS
 Small powerfull mixin library for less preprocessor of css. 
@@ -174,7 +174,7 @@ You can use this library with another less libraries without name conflicts. Thi
 MIT
 
 ## Support
-If you have any problems, catch the bug or have any suggestion - please [find an existing issue or create new](https://github.com/aliaksandr-pasynkau/hless/issues)
+If you have any problems, catch the bug or have any suggestion - please [find an existing issue or create new](https://github.com/aliaksandr-master/hless/issues)
 
 ## Contributing
 Do that! [How to contribute open-source projects](https://guides.github.com/activities/contributing-to-open-source/)

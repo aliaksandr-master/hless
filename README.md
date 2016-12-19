@@ -6,24 +6,22 @@
 [![Build Status](https://travis-ci.org/aliaksandr-master/hless.svg?branch=master&style=flat-square)](https://travis-ci.org/aliaksandr-master/hless)
 
 # HLESS
-Small powerfull mixin library for less preprocessor of css. 
+Small powerfull mixin library for less. 
 
 Css utils and css hacks kit.
 
-## Usage
+## Setup
 To install hless from npm, run:
 
 ```shell
-# npm:
 $ npm install hless --save
-
-# bower:
+# or
 $ bower install hless --save
 ```
 
 Finally, use in your `less` file:
 ```css
-@import "bower_components/hless/lib/index";
+@import "node_modules/hless/lib/index.less";
 
 // do something usefull
 ```
@@ -31,9 +29,6 @@ Finally, use in your `less` file:
 ### Features
 ```css
 // STRUCTURE ELEMENTS:
-._box_sizing(@type);
-
-._inline_block_old();
 
 ._grid-row(@margin: 0);
 ._grid-column(@factor, @margin: 0);
@@ -52,6 +47,9 @@ Finally, use in your `less` file:
 
 ._clearfix();
 ._clearfix_hard();
+
+._box_sizing(@type); // deprecated
+._inline_block_old(); // deprecated
 
 
 

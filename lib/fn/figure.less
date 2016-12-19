@@ -18,6 +18,31 @@
 	}
 }
 
+
+// FAKE
+._fake-text (@color-fake: #eee, @width: 80%) {
+	&:before {
+		content: '.';
+		display: inline-block;
+		width: @width;
+		line-height: inherit;
+		font-size: inherit;
+		background: @color-fake;
+		color: @color-fake;
+		border-radius: 2px;
+		vertical-align: baseline;
+	}
+};
+
+._fake-icon (@color-fake: #eee, @width: 100%, @height-ratio: 1, @radius: 0) {
+	._ratio(1, @height-ratio);
+	display: block;
+	background: @color-fake;
+	border-radius: @radius;
+	width: @width;
+}
+
+
 // COUNTER
 ._counter (@attr_name, @font_size, @bg, @color, @opacity: 1, @right: -3px, @bottom: -5px) {
 	position: relative;

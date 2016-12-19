@@ -62,6 +62,10 @@ Finally, use in your `less` file:
 ._ratio(@width, @height);
 ._ratio_before(@width, @height);
 
+// fake element placeholders
+._fake-text(@color-fake: #eee, @width: 80%);
+._fake-icon(@color-fake: #eee, @width: 100%, @height-ratio: 1, @radius: 0);
+
 // triangle
 ._triangle_color(@color);
 ._triangle_size(@size);

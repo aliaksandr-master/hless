@@ -101,6 +101,11 @@ Finally, use in your `less` file:
 
 
 
+// STYLES
+._square-pattern-bg (@bgColor: white, @squareColor: rgba(0,0,0,0.1), @squareSize: 10px);
+
+
+
 // TEXT ELEMENTS
 ._selection_disabled(@color: #444);
 

@@ -1,0 +1,9 @@
+
+
+._square-pattern-bg (@bgColor: white, @squareColor: rgba(0,0,0,0.1), @squareSize: 10px) {
+  background-color: @bgColor;
+  background-image: linear-gradient(45deg, @squareColor 24%, transparent 25%, transparent 75%, @squareColor 75%, @squareColor),
+                    linear-gradient(45deg, @squareColor 24%, transparent 25%, transparent 75%, @squareColor 75%, @squareColor);
+  background-size: @squareSize*2 @squareSize*2;
+  background-position: 0 0, @squareSize @squareSize;
+}

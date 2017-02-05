@@ -27,7 +27,7 @@ Finally, use in your `less` file:
 ```
 
 ### Features
-```css
+```less
 // STRUCTURE ELEMENTS:
 
 ._grid-row(@margin: 0);

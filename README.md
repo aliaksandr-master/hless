@@ -6,7 +6,7 @@
 [![Build Status](https://travis-ci.org/aliaksandr-master/hless.svg?branch=master&style=flat-square)](https://travis-ci.org/aliaksandr-master/hless)
 
 # HLESS
-Small powerfull mixin library for less. 
+Small powerfull mixin library for less and styled-components. 
 
 Css utils and css hacks kit.
 
@@ -19,9 +19,45 @@ $ npm install hless --save
 $ bower install hless --save
 ```
 
-Finally, use in your `less` file:
+Finally, use in your `js` file:
+```js
+import hlessClearfix from 'hless/styled/hlessClearfix';
+hlessClearfix();
+
+import hlessPlaceholder from 'hless/styled/hlessPlaceholder';
+hlessPlaceholder(/*color:*/'#eee', /*font-style: */'italic');
+
+import hlessSelectionDisabled from 'hless/styled/hlessSelectionDisabled';
+hlessSelectionDisabled(/*color:*/'#eee');
+
+import hlessRatio from 'hless/styled/hlessRatio';
+hlessRatio(2.5); // height:width == 2.5:1
+
+import hlessFakeIcon from 'hless/styled/hlessFakeIcon';
+hlessFakeIcon(/*color:*/'#eee', /*width:*/'100%', /*border-radius:*/'0');
+
+import hlessFakeText from 'hless/styled/hlessFakeText';
+hlessFakeText(/*color:*/'#eee', /*width:*/'100%');
+
+import hlessTriangle from 'hless/styled/hlessTriangle';
+hlessTriangle('bottom', /*size:*/'4px', /*color:*/'#eee');
+
+import { helssJustifyParent, helssJustifyChild } from 'hless/styled/helssJustify';
+helssJustifyParent();
+helssJustifyChild();
+
+import { helssFloatGridRow, helssFloatGridCol } from 'hless/styled/helssFloatGrid';
+helssFloatGridRow(/*margin:*/'16px');
+helssFloatGridCol(/*factor:*/1/12, /*margin:*/'16px');
+
+import { helssFlexGridRow, helssFlexGridCol } from 'hless/styled/helssFlexGrid';
+helssFlexGridRow(/*margin:*/'16px');
+helssFlexGridCol(/*factor:*/1/12, /*margin:*/'16px');
+```
+
+Use in your `less` file:
 ```css
-@import "node_modules/hless/lib/index.less";
+@import "hless/lib/index.less";
 
 // do something usefull
 ```

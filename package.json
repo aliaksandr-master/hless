@@ -22,7 +22,9 @@
     "url": "https://github.com/aliaksandr-master/hless/issues"
   },
   "homepage": "https://github.com/aliaksandr-master/hless",
-  "dependencies": {},
+  "dependencies": {
+    "styled-components": "^4.1.3"
+  },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",

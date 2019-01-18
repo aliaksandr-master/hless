@@ -1,31 +1,19 @@
 import { css } from 'styled-components';
+import hlessClearfix from './hlessClearfix';
 
 
 
-export const helssFlexGridRow = (margin = '') => css`
-box-sizing: border-box;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-flex: 0;
--ms-flex: 0 1 auto;
-flex: 0 1 auto;
--webkit-box-orient: horizontal;
--webkit-box-direction: normal;
--ms-flex-direction: row;
-flex-direction: row;
--ms-flex-wrap: wrap;
-flex-wrap: wrap;
-${margin ? `margin-right: -${margin};margin-left: -${margin};` : ''}
+export const helssFloatGridRow = (margin = '') => css`
+display: block;
+${margin && `margin-left: -${margin};margin-right: -${margin};`}
+${hlessClearfix()}
 `;
 
 
-export const helssFlexGridCol = (sizeFactor = 0.5, margin = '') => css`
+export const hlessFloatGridCol = (sizeFactor = 0.5, margin = '') => css`
+float: left;
+display: block;
 box-sizing: border-box;
--webkit-box-flex: 0;
--ms-flex: 0 0 auto;
-flex: 0 0 auto;
-${margin ? `padding-right: ${margin};padding-left: ${margin};` : ''}
-flex-basis: ${sizeFactor * 100}%;
-max-width: ${sizeFactor * 100}%;
+${margin && `padding-left: ${margin};padding-right: ${margin};`}
+width: ${sizeFactor * 100}%;
 `;
